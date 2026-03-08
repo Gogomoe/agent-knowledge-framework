@@ -36,13 +36,8 @@
 <!-- - `insights/xxx.md` — 关键词丰富的摘要（2-3 句） -->
 
 ### Experience（按需查阅，不常驻加载）
-<!--
-- `experience/xxx.md` — 关键词丰富的摘要（2-3 句）；写作结构可参考 `experience/TEMPLATE.md`
 
-建议的"唤醒路径"：
-1) 默认：先命中 skill/principle/insight（triggers）→ 再在其中通过 source / "Escalate to experience if" 升级加载 experience
-2) 例外：当出现明确症状（报错/异常现象）或是高风险任务（迁移/发布/回滚/权限）时，可直接用关键词命中 experience
--->
+- `experience/2026-03-08-textual-tui-first-practice.md` — textual 8.x TUI 开发首次实践：API 版本陷阱（ComposeResult/update_cell_at）、`gh run view --log` 输出格式解析（tab 分隔、按 job name 过滤）、headless 测试（run_test + pilot）、Collapsible 折叠/展开、单文件工具代码组织。
 
 ### Questions（已知的未知）
 
@@ -50,4 +45,4 @@
 
 ### Tools
 
-- `tools/gh-actions-tui.py` — GitHub Actions TUI 查看器：基于 textual 的左右分栏界面，可浏览 Runs、Jobs 列表并查看 Job Log，数据通过 `gh` CLI 获取。
+- [st1page/gh-actions-tui](https://github.com/st1page/gh-actions-tui) — GitHub Actions TUI 查看器：基于 textual 的左右分栏界面，可浏览 Runs、Jobs 列表并查看 Job Log，数据通过 `gh` CLI 获取。

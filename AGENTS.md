@@ -12,6 +12,8 @@ agent-knowledge-framework/
 │   ├── skills/                 # 通用技能（每个技能目录主入口为 SKILL.md）
 │   └── insights/               # 通用洞察（跨角色的规律性认知）
 └── roles/                      # 各角色目录
+    ├── cli-tool-dev/          # CLI/TUI 工具开发
+    ├── maintainer/            # 知识仓库维护
     └── <role>/
         ├── AGENTS.md          # 角色描述 + 知识索引（始终加载）
         ├── principles/        # 角色专有原则

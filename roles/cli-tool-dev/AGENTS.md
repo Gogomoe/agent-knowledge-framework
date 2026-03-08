@@ -28,9 +28,15 @@
 
 ### Skills
 
+- `skills/textual-async-data-loading/SKILL.md` — textual TUI 异步数据加载完整模式：`@work(thread=True)` 后台执行阻塞 IO → `call_from_thread` 回主线程渲染 → `LoadingIndicator` 过渡 → `exclusive` group 防抖 → dict 缓存 + stale check 防竞态。含 headless 测试中等待 worker 的方法。
+
 ### Principles
 
+- `principles/no-blocking-io-on-ui-thread.md` — TUI 开发中阻塞 IO（subprocess、HTTP、文件读写）必须在后台线程执行，UI 线程只做渲染和事件处理，否则界面冻结。
+
 ### Insights
+
+- `insights/llm-fast-iterating-lib-verification.md` — 快速迭代库（如 textual）的 API 在 LLM 训练数据中版本混杂，生成代码高概率使用过时 API。编码后立即用 `python3 -c` + `hasattr` / `inspect.signature` 验证 API 存在性。含已知陷阱表。
 
 ### Experience（按需查阅，不常驻加载）
 
@@ -39,7 +45,7 @@
 
 ### Questions（已知的未知）
 
-- `questions.md` — 0 条待验证
+- `questions.md` — 2 条待验证：`@work` vs `asyncio` subprocess 取舍、`gh` CLI failed step 检测方式
 
 ### Tools
 

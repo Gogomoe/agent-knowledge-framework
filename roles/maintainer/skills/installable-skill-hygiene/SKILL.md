@@ -1,5 +1,4 @@
 ---
-name: installable-skill-hygiene
 description: 发布/维护 installable skill（installable-skills/{name}）时的结构与引用卫生：自包含、禁止引用 skill 目录外路径、校验 front matter/YAML、以及发布口径（单文件 vs references/）取舍。触发条件：新增/更新 installable-skills、技能发布、安装后坏链接排查。
 triggers:
   - "installable-skills"

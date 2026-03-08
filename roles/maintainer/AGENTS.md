@@ -16,7 +16,7 @@
 
 ## 相关知识
 
-- `AGENTS.md` — 多 agent 协作规则（worktree、禁止 push master、PR 流程）
+- `AGENTS.md` — 多 agent 协作规则（worktree、禁止 push main、PR 流程）
 - `base/principles/git-worktree.md`
 - `base/principles/knowledge-loading.md`
 - `base/knowledge-sedimentation.md`
@@ -33,10 +33,8 @@
 - `skills/github-actions/SKILL.md` — GitHub Actions workflow 实战编写与调试：触发方式速查（push/pr/schedule/dispatch）、`needs` DAG 与 `if` 条件执行、`nick-fields/retry` 重试、secret/variable 注入、timeout/cancel/failure 的 conclusion 差异（timeout 在 job 级别是 `cancelled` 不是 `timed_out`）、`gh run` 调试命令。
 
 ### Principles
-<!-- - `principles/xxx.md` — 关键词丰富的摘要（2-3 句） -->
 
 ### Insights
-<!-- - `insights/xxx.md` — 关键词丰富的摘要（2-3 句） -->
 
 ### Experience（按需查阅，不常驻加载）
 

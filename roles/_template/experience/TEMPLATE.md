@@ -26,3 +26,13 @@
 
 - 产出（若有）：PR/commit/doc 链接或标识
 - 沉淀（若有）：这次新增/更新了哪些 skill/principle/insight（写路径）
+
+## 提炼检查
+
+> **写完 experience 后必须回答以下问题。** 不要跳过——只写 experience 不提炼就只是日记。
+
+- [ ] **Skill**：能否提炼出可复用的 checklist、操作流程或代码模式？→ 如能，新建或更新 `skills/` 下的文件
+- [ ] **Principle**：有没有值得记住的行为准则或硬性约束？→ 如有，新建或更新 `principles/` 下的文件
+- [ ] **Insight**：有没有跨场景可泛化的规律性认知？→ 如有，新建或更新 `insights/` 下的文件
+- [ ] **Question**：有没有注意到但没条件验证的疑问？→ 如有，写入 `questions.md`
+- [ ] **AGENTS.md 索引**：以上任何一项有产出，是否已同步更新角色 `AGENTS.md` 的知识索引？

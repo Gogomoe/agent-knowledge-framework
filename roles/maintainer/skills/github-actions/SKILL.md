@@ -1,6 +1,16 @@
 ---
 name: github-actions
 description: 实战编写与调试 GitHub Actions workflow：触发方式、job 依赖、条件执行、重试、secret/variable 注入、超时取消行为、调试技巧。触发条件：编写/调试 GitHub Actions workflow、CI/CD 配置、gh run 操作。
+triggers:
+  - "GitHub Actions"
+  - "workflow"
+  - "gh run"
+  - "CI/CD"
+  - "workflow_dispatch"
+  - "needs"
+  - "timeout-minutes"
+  - "concurrency"
+  - "rerun"
 source:
   - roles/maintainer/experience/2026-03-07-github-actions-lab-plan.md
   - roles/maintainer/experience/2026-03-08-github-actions-lab-execution.md
@@ -208,7 +218,7 @@ gh api repos/owner/repo/actions/runs/<run-id>/jobs \
 4. **Timeout conclusion 不是 timed_out**：job 级别的 conclusion 是 `cancelled`，不要在 `if: needs.*.result == 'timed_out'` 中判断
 5. **Secret 不能用于 if 条件**：`if: secrets.X != ''` 不工作，需要通过 env 中转后在 shell 中判断
 6. **concurrency cancel-in-progress**：新 run 会取消旧 run 中所有正在运行的 job，不仅仅是同名 job
-7. **gh run rerun --failed**：只重跑 conclusion 为 `failure` 的 job，`cancelled`/`timed_out` 的 job 也会被重跑
+7. **gh run rerun --failed 范围比名字暗示的更广**：重跑所有非 success 的 job（包括 `failure` 和 `cancelled`），不仅仅是 `failure`
 8. **Artifact 名称冲突**：同一 run 的多次 attempt 产出的 artifact 需要用 `run_attempt` 区分名称
 
 ## Escalate to experience if

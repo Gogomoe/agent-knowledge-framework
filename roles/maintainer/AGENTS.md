@@ -30,6 +30,7 @@
 ### Skills
 
 - `skills/installable-skill-hygiene/SKILL.md` — installable skill "发布前检查"清单：禁止引用 skill 目录外路径、引用闭包自检、`rg` 快速扫描，以及"单文件 vs references/"两种发布口径的取舍。
+- `skills/github-actions/SKILL.md` — GitHub Actions workflow 实战编写与调试：触发方式速查（push/pr/schedule/dispatch）、`needs` DAG 与 `if` 条件执行、`nick-fields/retry` 重试、secret/variable 注入、timeout/cancel/failure 的 conclusion 差异（timeout 在 job 级别是 `cancelled` 不是 `timed_out`）、`gh run` 调试命令。
 
 ### Principles
 <!-- - `principles/xxx.md` — 关键词丰富的摘要（2-3 句） -->
@@ -38,9 +39,9 @@
 <!-- - `insights/xxx.md` — 关键词丰富的摘要（2-3 句） -->
 
 ### Experience（按需查阅，不常驻加载）
-<!--
-- `experience/xxx.md` — 关键词丰富的摘要（2-3 句）；写作结构可参考 `experience/TEMPLATE.md`
--->
+
+- `experience/2026-03-07-github-actions-lab-plan.md` — `st1page/gh-actions-lab` 实验仓库的 9 个 workflow 设计计划与验证清单。
+- `experience/2026-03-08-github-actions-lab-execution.md` — 9 个 workflow 的执行记录：关键发现 timeout conclusion 是 `cancelled`、`gh run cancel` 覆盖行为、paths filter 与 dispatch 交互、rerun --failed 范围。
 
 ### Questions（已知的未知）
 

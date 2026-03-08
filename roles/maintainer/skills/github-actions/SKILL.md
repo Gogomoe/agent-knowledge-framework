@@ -2,6 +2,7 @@
 name: github-actions
 description: 实战编写与调试 GitHub Actions workflow：触发方式、job 依赖、条件执行、重试、secret/variable 注入、超时取消行为、调试技巧。触发条件：编写/调试 GitHub Actions workflow、CI/CD 配置、gh run 操作。
 source:
+  - roles/maintainer/experience/2026-03-07-github-actions-lab-plan.md
   - roles/maintainer/experience/2026-03-08-github-actions-lab-execution.md
 ---
 

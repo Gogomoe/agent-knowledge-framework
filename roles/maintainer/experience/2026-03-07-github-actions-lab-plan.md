@@ -61,13 +61,16 @@
 
 ## 验证清单
 
-- [ ] 每个 workflow 至少成功运行一次（或按预期失败）
-- [ ] PR check 阻塞合并
-- [ ] scheduled workflow 被注册
-- [ ] retry 最终成功
-- [ ] timeout/cancel/failure 的 conclusion 差异可观测
-- [ ] rerun attempt number 递增
+- [x] 每个 workflow 至少成功运行一次（或按预期失败）
+- [x] PR check 阻塞合并
+- [x] scheduled workflow 被注册
+- [x] retry 最终成功
+- [x] timeout/cancel/failure 的 conclusion 差异可观测
+- [x] rerun attempt number 递增
+
+> 执行记录见 [2026-03-08-github-actions-lab-execution.md](2026-03-08-github-actions-lab-execution.md)
 
 ## 产出
 
 - `roles/maintainer/skills/github-actions/SKILL.md` — GitHub Actions 实战编写与调试 skill
+- `roles/maintainer/experience/2026-03-08-github-actions-lab-execution.md` — 执行记录与关键发现

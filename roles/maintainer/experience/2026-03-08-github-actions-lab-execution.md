@@ -8,9 +8,11 @@
 
 ## 背景
 
-在 `st1page/gh-actions-lab` 公共仓库中，设计并运行 9 个 workflow 覆盖 GitHub Actions 核心场景，目标是产出 `roles/maintainer/skills/github-actions/SKILL.md`。
+按 [实验设计计划](2026-03-07-github-actions-lab-plan.md) 在 `st1page/gh-actions-lab` 公共仓库中运行 9 个 workflow，覆盖 GitHub Actions 核心场景。
 
-仓库：https://github.com/st1page/gh-actions-lab
+- 计划文档：`roles/maintainer/experience/2026-03-07-github-actions-lab-plan.md`
+- 实验仓库：https://github.com/st1page/gh-actions-lab
+- 沉淀 skill：`roles/maintainer/skills/github-actions/SKILL.md`
 
 ## 证据与现象
 

@@ -395,8 +395,13 @@ Agent 工作中涉及两类仓库，规则同样适用：
 
 ### 1. 所有写操作必须在 worktree 中进行，禁止直接 push main
 
-**始终创建 worktree**，不要在主工作目录中 `git checkout` 切分支。只读操作可以在 main 上进行。
+**始终创建 worktree**，不要在主工作目录中 `git checkout` 或 `git checkout -b` 切分支。只读操作可以在 main 上进行。
 
+**常见违规模式（禁止）**：
+- `git checkout -b <branch>` 然后直接在主工作目录编辑——这不是 worktree，只是切了分支
+- "先写完再搬到 worktree"——一旦开始编辑就很难搬，必须一开始就在 worktree 里
+
+**正确流程**：
 ```bash
 git fetch origin
 git worktree add .claude/worktrees/<topic> -b <agent>/<topic> origin/main
@@ -406,6 +411,8 @@ git push -u origin <agent>/<topic>
 ```
 
 **关键**：永远基于 `origin/main` 创建 worktree，不要基于本地 `main`（可能过时）。详见 `base/principles/git-worktree.md`。
+
+> **检查点**：执行任何 `git checkout -b` 或文件编辑前，先问自己"我现在在 worktree 里吗？"。如果 `pwd` 不包含 `.claude/worktrees/`，停下来，先创建 worktree。
 
 ### 2. 通过 PR 合并，agent 不要自行 merge
 

@@ -15,7 +15,7 @@ triggers:
 
 ## 核心规则
 
-1. **只读操作**可以直接在主 worktree（`master` 分支）进行
+1. **只读操作**可以直接在主 worktree（`main` 分支）进行
 2. **写操作**必须在独立 worktree 中进行，完成后通过 PR 合并
 3. 每个 worktree 对应一个独立分支，分支命名需包含 agent 标识
 
@@ -26,10 +26,10 @@ triggers:
 ```bash
 # 在仓库根目录执行
 git fetch origin
-git worktree add .claude/worktrees/<topic> -b <agent>/<topic> origin/master
+git worktree add .claude/worktrees/<topic> -b <agent>/<topic> origin/main
 
 # 示例
-git worktree add .claude/worktrees/add-new-skill -b alice/add-new-skill origin/master
+git worktree add .claude/worktrees/add-new-skill -b alice/add-new-skill origin/main
 ```
 
 ### 在 worktree 中工作
@@ -50,17 +50,17 @@ git push -u origin alice/add-new-skill
 # 创建 PR → review → merge
 
 # 合并后清理 worktree
-cd /path/to/master-worktree
+cd /path/to/main-worktree
 git worktree remove .claude/worktrees/add-new-skill
 git branch -d alice/add-new-skill
 ```
 
-### 同步 master 的最新变更
+### 同步 main 的最新变更
 
 ```bash
-# 在 worktree 中拉取 master 的更新
+# 在 worktree 中拉取 main 的更新
 git fetch origin
-git rebase origin/master
+git rebase origin/main
 ```
 
 ## 分支命名约定
@@ -85,7 +85,7 @@ git rebase origin/master
 从一开始就在 worktree 里操作，完全隔离：
 
 ```bash
-git worktree add .claude/worktrees/update-docs -b claude/update-docs origin/master
+git worktree add .claude/worktrees/update-docs -b claude/update-docs origin/main
 cd .claude/worktrees/update-docs
 # 直接编辑文件，commit，push
 # 不会碰到任何 stash/冲突问题
@@ -97,7 +97,7 @@ cd .claude/worktrees/update-docs
 
 ```bash
 git stash
-git worktree add .claude/worktrees/update-docs -b claude/update-docs origin/master
+git worktree add .claude/worktrees/update-docs -b claude/update-docs origin/main
 cd .claude/worktrees/update-docs
 git checkout stash -- path/to/file.md   # 只取一个文件
 git stash drop
@@ -117,5 +117,5 @@ git stash drop
 - worktree 中的 submodule 需要单独初始化：`git submodule update --init`
 - 完成工作后务必清理 worktree，避免残留占用磁盘
 - 如果 worktree 被意外删除（未用 `git worktree remove`），用 `git worktree prune` 清理记录
-- **创建 worktree 前必须 `git fetch origin`**，基于 `origin/master` 而非本地 `master`，否则可能基于过时代码开发导致 PR 冲突
+- **创建 worktree 前必须 `git fetch origin`**，基于 `origin/main` 而非本地 `main`，否则可能基于过时代码开发导致 PR 冲突
 - **即使是「先探索一下」也应该在 worktree 里做**，因为探索很容易变成正式开发，事后再搬改动到 worktree 步骤繁琐且容易遗漏文件

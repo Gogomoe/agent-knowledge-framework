@@ -16,7 +16,7 @@
 
 ## 相关知识
 
-- `AGENTS.md` — 多 agent 协作规则（worktree、禁止 push master、PR 流程）
+- `AGENTS.md` — 多 agent 协作规则（worktree、禁止 push main、PR 流程）
 - `base/principles/knowledge-loading.md`
 - `base/knowledge-sedimentation.md`
 
@@ -27,13 +27,10 @@
 > 每条摘要必须包含**足够的关键词**，让 agent 能判断是否与当前任务相关。
 
 ### Skills
-<!-- - `skills/<skill-name>/SKILL.md` — 关键词丰富的摘要（2-3 句） -->
 
 ### Principles
-<!-- - `principles/xxx.md` — 关键词丰富的摘要（2-3 句） -->
 
 ### Insights
-<!-- - `insights/xxx.md` — 关键词丰富的摘要（2-3 句） -->
 
 ### Experience（按需查阅，不常驻加载）
 

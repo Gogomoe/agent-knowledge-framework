@@ -42,25 +42,25 @@ Agent 工作中涉及两类仓库，规则同样适用：
 - **Agent 目录**（本仓库）：存放角色知识、经验、技能文档
 - **工作目录**（实际代码仓库）
 
-### 1. 所有写操作必须在 worktree 中进行，禁止直接 push master
+### 1. 所有写操作必须在 worktree 中进行，禁止直接 push main
 
-**始终创建 worktree**，不要在主工作目录中 `git checkout` 切分支。只读操作可以在 master 上进行。
+**始终创建 worktree**，不要在主工作目录中 `git checkout` 切分支。只读操作可以在 main 上进行。
 
 ```bash
 git fetch origin
-git worktree add .claude/worktrees/<topic> -b <agent>/<topic> origin/master
+git worktree add .claude/worktrees/<topic> -b <agent>/<topic> origin/main
 cd .claude/worktrees/<topic>
 # ... 编辑、commit ...
 git push -u origin <agent>/<topic>
 ```
 
-**关键**：永远基于 `origin/master` 创建 worktree，不要基于本地 `master`（可能过时）。详见 `base/principles/git-worktree.md`。
+**关键**：永远基于 `origin/main` 创建 worktree，不要基于本地 `main`（可能过时）。详见 `base/principles/git-worktree.md`。
 
 ### 2. 通过 PR 合并，agent 不要自行 merge
 
 - push 分支后创建 PR，交给**人工 review 后合并**
 - **agent 不得自行 merge PR**，即使有权限也不要执行
-- push 时发现冲突：`git fetch origin && git rebase origin/master` 解决后再 push
+- push 时发现冲突：`git fetch origin && git rebase origin/main` 解决后再 push
 
 ### 3. push 后同步更新 PR title/description
 
@@ -96,8 +96,8 @@ git branch -d <agent>/<topic>
 
 ```bash
 git fetch origin
-git rev-list --left-right --count master...origin/master   # 0 0 = 一致; 0 N = 落后需同步
-git pull --rebase origin master                             # 工作区干净时执行
+git rev-list --left-right --count main...origin/main   # 0 0 = 一致; 0 N = 落后需同步
+git pull --rebase origin main                             # 工作区干净时执行
 ```
 
-> 写操作仍以 `origin/master` 创建 worktree 为准，不要依赖本地 master。
+> 写操作仍以 `origin/main` 创建 worktree 为准，不要依赖本地 main。

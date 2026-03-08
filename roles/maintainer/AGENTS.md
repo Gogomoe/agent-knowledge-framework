@@ -42,6 +42,7 @@
 
 - `experience/2026-03-07-github-actions-lab-plan.md` — `st1page/gh-actions-lab` 实验仓库的 9 个 workflow 设计计划与验证清单。
 - `experience/2026-03-08-github-actions-lab-execution.md` — 9 个 workflow 的执行记录：关键发现 timeout conclusion 是 `cancelled`、`gh run cancel` 覆盖行为、paths filter 与 dispatch 交互、rerun --failed 范围。
+- `experience/2026-03-08-sedimentation-delivery-checklist-gap.md` — 知识沉淀交付时遗漏联动更新（AGENTS.md 索引、front matter triggers、交叉引用冗余、表述矛盾），根因是"抄已有文件格式而非回读规范"和"逐块修改不回看整体"。
 
 ### Questions（已知的未知）
 

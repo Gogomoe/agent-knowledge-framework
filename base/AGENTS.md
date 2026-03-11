@@ -8,7 +8,7 @@
 |---|---|
 | `experience/` | 不绑定具体角色的经验素材与复盘 |
 | `principles/` | 通用原则（凭证安全、git worktree 协作、性能回归测试、先查惯例再动手） |
-| `skills/` | 通用技能（每个技能目录主入口为 `SKILL.md`，辅文档可放 `AGENTS.md` / 其他 `.md`） |
+| `skills/` | 通用技能（每个技能目录主入口为 `SKILL.md`，目录索引见 `skills/AGENTS.md`） |
 | `insights/` | 通用洞察（跨层改动逐层 review） |
 | `knowledge-sedimentation.md` | 经验沉淀规范：知识分类、存放位置判断、提炼流程、反模式 |
 

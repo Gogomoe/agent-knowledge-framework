@@ -11,3 +11,4 @@
 - [structured-text-over-ascii-art.md](structured-text-over-ascii-art.md) — 知识文档应避免 ASCII 字符画，用结构化文本（列表、表格）替代，对 LLM 更友好
 - [document-format-signals-knowledge-type.md](document-format-signals-knowledge-type.md) — 文档的格式暴露类型错配：对比表/选型指南是 insight，不是 skill；skill 必须有可执行的操作流程
 - [domain-knowledge-in-project-not-role.md](domain-knowledge-in-project-not-role.md) — 领域认知（理论发现、研究结论）沉淀在独立项目仓库，角色只保留方法论和操作性知识
+- [memory-index-is-bootstrap-control-plane.md](memory-index-is-bootstrap-control-plane.md) — 给 persistent agent 接入新 framework/role 能力时，repo clone 只是分发手段；真正的 bootstrap 控制面是 agent 自己的 MEMORY 索引与角色入口

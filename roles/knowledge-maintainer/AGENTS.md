@@ -1,0 +1,47 @@
+# knowledge-maintainer
+
+## 职责
+
+负责 agent 知识框架本身的结构与活性，重点覆盖：
+
+- role/base 边界判断
+- sedimentation、loading、comment、索引与 provenance 规则
+- 从临时知识仓库或项目材料中做 role-first 的迁移
+- 避免 manifest/schema 先行而 role/index 缺位
+
+## 使用的工具
+
+- `rg`
+- `git`
+- `gh`
+- 文档编辑与结构化整理
+
+## 相关知识
+
+- `AGENTS.md` — 多 agent 协作规则（worktree、禁止 push main、PR 流程）
+- `base/principles/knowledge-loading.md`
+- `base/knowledge-sedimentation.md`
+- `base/insights/domain-knowledge-in-project-not-role.md`
+
+## 角色知识索引
+
+> 本索引是 agent 的**首要加载入口**。先读索引了解有哪些知识，再按需 `Read` 具体文件。不要一次性加载所有文档。
+>
+> 每条摘要必须包含**足够的关键词**，让 agent 能判断是否与当前任务相关。
+
+### Skills
+
+- `skills/framework-bootstrap/SKILL.md` — 给其他 agent 接入 `agent-knowledge-framework` 的标准 onboarding 流程：clone/fetch 正确 fork、读取 root/role `AGENTS.md`、把 framework 路径写入对方 memory、在缺少精确 role 时做 provisional mapping，并校验 `MEMORY.md -> framework-access -> role path` 的可恢复链。
+- `skills/framework-update-rollout/SKILL.md` — 当 `agent-knowledge-framework` 本身发生更新时，判断这次变更是 routine 还是 shared structural，并决定是否需要发 `#notification`、批量修正 agent memory/bootstrap note、以及如何验证恢复链没有断掉。
+
+### Principles
+
+### Insights
+
+### Experience（按需查阅，不常驻加载）
+
+- `experience/2026-03-11-slock-agent-framework-bootstrap.md` — 给 Tao / Skych 接 framework 的完整记录：clone 本地 fork、把路径和 GitHub 规则写进目标 agent memory、处理没有 dedicated role 时的 provisional mapping，并从中抽取 bootstrap skill 缺口。
+
+### Questions（已知的未知）
+
+- `questions.md` — 0 条待验证

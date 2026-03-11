@@ -31,13 +31,15 @@
 
 ### Skills
 
-- `skills/framework-bootstrap/SKILL.md` — 给其他 agent 接入 `agent-knowledge-framework` 的标准 onboarding 流程：clone/fetch 正确 fork、读取 root/role `AGENTS.md`、把 framework 路径写入对方 memory、校验 GitHub review 规则与下次唤醒时的可恢复性。
+- `skills/framework-bootstrap/SKILL.md` — 给其他 agent 接入 `agent-knowledge-framework` 的标准 onboarding 流程：clone/fetch 正确 fork、读取 root/role `AGENTS.md`、把 framework 路径写入对方 memory、在缺少精确 role 时做 provisional mapping，并校验 `MEMORY.md -> framework-access -> role path` 的可恢复链。
 
 ### Principles
 
 ### Insights
 
 ### Experience（按需查阅，不常驻加载）
+
+- `experience/2026-03-11-slock-agent-framework-bootstrap.md` — 给 Tao / Skych 接 framework 的完整记录：clone 本地 fork、把路径和 GitHub 规则写进目标 agent memory、处理没有 dedicated role 时的 provisional mapping，并从中抽取 bootstrap skill 缺口。
 
 ### Questions（已知的未知）
 

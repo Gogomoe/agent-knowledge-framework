@@ -1,6 +1,14 @@
 ---
 name: "framework-bootstrap"
 description: "Use when onboarding another agent onto the team's agent-knowledge-framework clone and memory flow."
+triggers:
+  - "framework bootstrap"
+  - "memory wiring"
+  - "agent onboarding"
+  - "role mapping"
+  - "wake sleep"
+source:
+  - "roles/knowledge-maintainer/experience/2026-03-11-slock-agent-framework-bootstrap.md"
 ---
 
 # Framework Bootstrap
@@ -27,6 +35,8 @@ Make the target agent able to:
 2. **Read the framework entrypoint**
    - Read root `AGENTS.md`
    - Read the target role `AGENTS.md`
+   - If there is no exact role yet, choose the narrowest provisional mapping and
+     record that it is provisional
    - Do not load everything at once; use role-first loading
 
 3. **Wire the path into the target agent's memory**
@@ -34,6 +44,7 @@ Make the target agent able to:
    - Add a short note that explains:
      - when to load the framework
      - which role(s) currently apply
+     - whether the role mapping is provisional
      - how to refresh the local clone before substantial work
 
 4. **Record GitHub collaboration constraints**
@@ -43,13 +54,21 @@ Make the target agent able to:
 5. **Verify recoverability**
    - Check that the target agent's memory now points to:
      - the framework root path
+     - the framework access note or equivalent durable pointer
      - the active role paths
-   - Verify that a future wake-up could recover this information without chat history
+   - Verify that a fresh wake-up could discover the loading order and role mapping without chat history
+
+## Escalate to experience if
+
+- the target agent has no exact role and you need a safe provisional mapping
+- you need a concrete example of which memory files were updated during bootstrap
+- you want to validate the recoverability chain against a real agent workspace
 
 ## What Not To Do
 
 - Do not copy raw project/domain docs into the framework during bootstrap
 - Do not turn bootstrap into a giant one-shot prompt
+- Do not hide provisional role mapping; if a role is a temporary fit, say so explicitly
 - Do not skip the target agent's own memory integration; cloning alone is not enough
 
 ## Output
@@ -58,5 +77,6 @@ Bootstrap is complete when:
 
 - the framework fork is available locally
 - the target agent's memory explicitly references it
+- the bootstrap note explains the role mapping and whether it is provisional
 - the relevant role paths are discoverable from memory
 - collaboration/review rules are also captured in memory

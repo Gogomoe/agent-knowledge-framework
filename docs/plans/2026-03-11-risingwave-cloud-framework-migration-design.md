@@ -76,5 +76,6 @@ Migrates in:
 ## First Deliverable
 
 - add the three initial Eric roles
+- add a reusable bootstrap skill under `knowledge-maintainer`
 - document the migration boundary in this design doc
 - make future migration operate role-first rather than manifest-first

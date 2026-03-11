@@ -31,6 +31,8 @@
 
 ### Skills
 
+- `skills/framework-bootstrap/SKILL.md` — 给其他 agent 接入 `agent-knowledge-framework` 的标准 onboarding 流程：clone/fetch 正确 fork、读取 root/role `AGENTS.md`、把 framework 路径写入对方 memory、校验 GitHub review 规则与下次唤醒时的可恢复性。
+
 ### Principles
 
 ### Insights

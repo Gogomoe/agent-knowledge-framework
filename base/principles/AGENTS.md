@@ -12,6 +12,7 @@
 - [let-it-crash-for-batch-jobs.md](let-it-crash-for-batch-jobs.md) — batch job 错误处理应区分'可预期的业务异常'和'不可预期的系统故障'：前者在代码中处理并正常退出，后者让任务直接崩溃由调度器重启
 - [persistent-task-state-must-be-externalized.md](persistent-task-state-must-be-externalized.md) — 需要跨 session、跨 agent 保留的任务状态，必须外显到文件、branch、日志或标准 CLI 产物
 - [explicit-tmpdir-for-long-jobs.md](explicit-tmpdir-for-long-jobs.md) — 长任务/高并行任务禁止依赖默认 /tmp；必须显式指定 TMPDIR 到可控路径
+- [all-agents-own-knowledge-refresh-and-sedimentation.md](all-agents-own-knowledge-refresh-and-sedimentation.md) — 无论主角色是什么，每个 agent 都有责任刷新自己的知识入口、维护恢复链，并在重要工作后检查是否需要沉淀新的经验/技能/原则/洞察
 
 ## 文档格式约定
 

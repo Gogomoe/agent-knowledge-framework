@@ -35,6 +35,8 @@
 
 ### Insights
 
+- `insights/shared-responsibilities-belong-in-base-specialization-stays-in-roles.md` — 当某个职责被证明是所有 agent 都需要做的，不要把所有人都改造成同一个 specialist role；应把该职责上提到 `base/`，再由 `agent-team-manager` 负责 rollout 与治理。
+
 ### Experience（按需查阅，不常驻加载）
 
 ### Questions（已知的未知）

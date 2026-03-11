@@ -7,6 +7,8 @@ triggers:
   - "沉淀经验"
   - "更新 role skill"
   - "agent lifecycle"
+source:
+  - "base/experience/2026-03-11-merged-framework-pr-not-visible-until-local-refresh.md"
 ---
 
 # Agent Knowledge Lifecycle

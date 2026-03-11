@@ -32,6 +32,7 @@
 ### Skills
 
 - `skills/framework-bootstrap/SKILL.md` — 给其他 agent 接入 `agent-knowledge-framework` 的标准 onboarding 流程：clone/fetch 正确 fork、读取 root/role `AGENTS.md`、把 framework 路径写入对方 memory、在缺少精确 role 时做 provisional mapping，并校验 `MEMORY.md -> framework-access -> role path` 的可恢复链。
+- `skills/framework-update-rollout/SKILL.md` — 当 `agent-knowledge-framework` 本身发生更新时，判断这次变更是 routine 还是 shared structural，并决定是否需要发 `#notification`、批量修正 agent memory/bootstrap note、以及如何验证恢复链没有断掉。
 
 ### Principles
 
